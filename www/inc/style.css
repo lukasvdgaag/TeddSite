@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    color: #fefefe;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1300px) {
+    .content {
+        width: 90%;
+    }
+}
+
+header, footer {
+    background-color: #131313;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.flex-d-col {
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: relative;
+    height: 50vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: 1;
+}
+
+.header-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+}
+
+nav {
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    transition: .3s all ease-in-out;
+    -o-transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+}
+nav.scroll {
+    background-color: #fff;
+    height: 65px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+nav.scroll a, nav.scroll span {
+    color: black;
+}
+nav.scroll a {
+    font-weight: 600;
+}
+
+nav .content {
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 0;
+}
+
+.nav-items, .nav-items a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-items span {
+    margin: 0 5px;
+    font-weight: 400;
+}
+
+main {
+    background-color: #e6e6e6;
+}
+
+section {
+    padding: 50px 0;
+    row-gap: 20px;
+}
+
+.card {
+    background-color: white;
+}
+
+.card-header {
+    height: 200px;
+    width: 300px;
+}
+
+.card-header img {
+    max-height: 80%;
+    width: auto;
+    transition: .5s all ease-in-out;
+    -webkit-transition: .5s all ease-in-out;
+    -moz-transition: .5s all ease-in-out;
+    -o-transition: .5s all ease-in-out;
+}
+
+.card-header img:hover {
+    max-height: 95%;
+    filter: drop-shadow(2px 2px 0 rgba(26, 26, 26, 0.33)) drop-shadow(-2px -2px 0 rgba(26, 26, 26, 0.33));
+}
+
+.card-body {
+    text-align: center;
+    padding: 10px;
+}
+
+.icon {
+    margin: 0 2px;
+}
+
+.icons {
+    column-gap: 0;
+}
+
+.card:nth-child(3n+1) .card-body {
+    background-color: #52889a;
+}
+
+.card:nth-child(3n+2) .card-body {
+    background-color: #83c7a6;
+}
+
+.card:nth-child(3n+3) .card-body {
+    background-color: #f08085;
+}
+
+hr {
+    border: none;
+    border-bottom: 2px solid #353535;
+    width: 100%;
+}
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #a4a4a4;
+    margin: 5px auto;
+    width: 75%;
+    text-align: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 400px) {
+    nav .content {
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    main .content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .header-image {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 750px ) {
+    footer p {
+        width: 100%;
+    }
+}
